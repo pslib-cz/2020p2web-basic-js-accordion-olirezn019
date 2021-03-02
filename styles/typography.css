@@ -1,0 +1,469 @@
+:root {
+  --bg: #f7f7f7;
+  --blue: #007784;
+  --red: #d05555;
+  --green: #00ae7c;
+  --yellow: #d0b055;
+  --blueClassic: #5586d0;
+  --lightGrey: rgb(238, 238, 238);
+  --white: #fff;
+  --black: #000;
+
+  --transparentBorder: 2px solid transparent;
+  --lightBorder: 1px solid rgba(0, 0, 0, 0.3);
+  --btnBorder: 2px solid #007784;
+  --basicBorder: 1px solid #000;
+  --boldBorder: 2px solid #000;
+  --greenBorder: 2px solid #00ae7c;
+  --redBorder: 2px solid #d05555;
+
+  --boxShadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
+  --boxShadowLight: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+
+  --smallestFontSize: 0.64rem;
+  --smallFontSize: 0.8rem;
+  --baseFontSize: 1rem;
+  --biggerFontSize: 1.125rem;
+  --heading-3: 1.25rem;
+  --heading-2: 1.563rem;
+  --heading-1: 1.953rem;
+  --xtraHeading: 3.052rem;
+
+  --semibold: 400;
+  --bold: 500;
+  --xtrabold: 600;
+}
+
+html * {
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  html * {
+    font-size: 16px;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.no-active {
+  display: none !important;
+}
+
+.label{
+  font-size: var(--baseFontSize);
+}
+
+.file-input[type=file]::-webkit-file-upload-button,
+.file-input[type=file]::file-selector-button{
+  font-size: var(--baseFontSize);
+}
+
+/* NOTE navigace  */
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: var(--heading-3);
+}
+
+.nav-target {
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.nav-a,
+.nav-summary,
+.footer-text {
+  font-size: var(--smallFontSize);
+}
+
+/* NOTE nadpisy  */
+
+.h1 {
+  font-size: var(--heading-1);
+}
+
+.h2,
+.h2-varianty-predmetu {
+  font-size: var(--heading-2);
+}
+
+.h2-uprava-predmetu {
+  color: var(--blue);
+  font-weight: var(--bold);
+}
+
+.h3-nahled-nazev-predmetu {
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.select-nazev-predmetu-heading {
+  font-weight: var(--semibold);
+}
+
+
+/* NOTE loginpage */
+
+.login-text {
+  font-size: var(--baseFontSize);
+}
+
+.login-heading{
+  font-size: var(--xtraHeading);
+}
+
+.login-text{
+  font-size: var(--biggerFontSize);
+}
+
+.login-btn {
+  font-size: var(--biggerFontSize);
+}
+
+.logout-btn-text {
+  color: var(--blue);
+  font-size: var(--smallFontSize);
+}
+
+/* NOTE produkt item */
+
+.product-title {
+  font-size: var(--heading-3);
+}
+
+.btn-kosik-text-pridano {
+  color: var(--blue);
+  font-weight: var(--semibold);
+}
+
+.btn-homepage-text-pridano {
+  color: var(--blue);
+  font-size: var(--smallFontSize);
+  font-weight: var(--semibold);
+}
+
+.pridat-do-kosiku-btn-a {
+  color: var(--white);
+  font-size: var(--smallFontSize);
+}
+
+.btn-homepage-text-pridano{
+  color: var(--blue);
+}
+
+.product-title-a {
+  font-size: var(--baseFontSize);
+  font-weight: var(--semibold);
+  line-height: 1;
+}
+
+.product-text {
+  font-size: var(--smallFontSize);
+}
+
+/* NOTE detail předmětu  */
+
+.predmet-detail-dd {
+  font-weight: var(--bold);
+  padding-bottom: 10px;
+}
+
+.pocet-kusu-border-btn {
+  font-size: var(--baseFontSize);
+}
+
+.predmet-detail-kosik-btn {
+  font-size: var(--smallFontSize);
+}
+
+.detail-heading {
+  font-weight: var(--bold);
+}
+
+.btn-kosik-text {
+  color: var(--white);
+}
+
+.kosik-nazev-produktu-a {
+  font-size: var(--baseFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.kosik-specifikace-produktu {
+  font-size: var(--smallFontSize);
+  opacity: .7;
+}
+
+/* NOTE výpůjčka  */
+
+.vypujcka-jmeno {
+  font-size: var(--biggerFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.detail-vypujcky-nazev-produktu-a {
+  font-size: var(--baseFontSize);
+  font-weight: var(--bold);
+}
+
+.detail-vypujcky-specifikace {
+  font-size: var(--smallFontSize);
+  opacity: .7;
+}
+
+.vypujcka-stav {
+  font-size: var(--baseFontSize);
+  font-weight: var(--xtrabold);
+}
+
+.stav-budouci {
+  color: var(--blueClassic);
+}
+
+.stav-nevraceno {
+  color: var(--red);
+}
+
+.stav-nevypujceno {
+  color: var(--yellow);
+}
+
+.stav-vypujceno {
+  color: var(--blue);
+}
+
+.stav-vraceno {
+  color: var(--green);
+}
+
+.poznamka-dt {
+  font-weight: var(--bold);
+}
+
+/* NOTE zákazníci + detail zákazníka */
+
+.zakaznik-jmeno-odkaz {
+  font-size: var(--baseFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.td-zakaznik-mail,
+.td-zakaznik-trida,
+.td-zakaznik-vypujcka-datum {
+  font-size: var(--baseFontSize);
+}
+
+.dt-zakaznik {
+  font-size: var(--smallFontSize);
+}
+
+.dd-zakaznik {
+  font-size: var(--baseFontSize);
+  font-weight: var(--semibold);
+  color: var(--blue);
+}
+
+.dd-zakaznik-jmeno {
+  font-weight: var(--xtrabold);
+}
+
+/* NOTE správci  */
+
+.spravci-jmeno {
+  font-size: var(--biggerFontSize);
+  font-weight: var(--bold);
+  color: var(--blue);
+}
+
+.spravci-mail {
+  font-size: var(--baseFontSize);
+}
+
+.spravci-role-hodnota {
+  font-size: var(--baseFontSize);
+  font-weight: var(--semibold);
+}
+
+/* NOTE historie předmetu  */
+
+.varianta-predmetu {
+  font-size: var(--biggerFontSize);
+  font-weight: var(--semibold);
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+
+/* NOTE ikony  */
+
+.icon {
+  padding: 5px;
+}
+
+.icon-filter::before {
+  content: url(../img/filter-mobile.svg);
+}
+
+.icon-arrow-down::before {
+  content: url(../img/arrow-down.svg);
+}
+
+.icon-arrow-left::after {
+  content: url(../img/arrow-left.svg);
+}
+
+.icon-arrow-right::after {
+  content: url(../img/arrow-right.svg);
+}
+
+.icon-login-arrow-right::before {
+  content: url(../img/login-arrow-right.svg);
+}
+
+.icon-login-arrow-right-min::before {
+  content: url(../img/login-arrow-right-min.svg);
+}
+
+.icon-edit-pen::before {
+  content: url(../img/edit-pen.svg);
+}
+
+.icon-plus::before {
+  content: url(../img/plus.svg);
+  cursor: pointer;
+}
+
+.icon-plus-min::before {
+  content: url(../img/plus-min.svg);
+}
+
+.icon-minus::before {
+  content: url(../img/minus.svg);
+  cursor: pointer;
+}
+
+.icon-minus-min::before {
+  content: url(../img/minus-min.svg);
+}
+
+.icon-dot-border::before {
+  content: url(../img/dot-border.svg);
+}
+
+.icon-dot-fill::before {
+  content: url(../img/dot-fill.svg);
+}
+
+.icon-dot-blue::before {
+  content: url(../img/dot-blue.svg);
+}
+
+.icon-order::after {
+  content: url(../img/order.svg);
+}
+
+.icon-notification::before {
+  content: url(../img/notification.svg);
+}
+
+.icon-close::before {
+  content: url(../img/close.svg);
+}
+
+.icon-wishlist::before {
+  content: url(../img/heart-border-black.svg);
+}
+
+.icon-wishlist-blue::before {
+  content: url(../img/heart-border-blue.svg);
+}
+
+.icon-cart-black::before {
+  width: 25px;
+  height: 25px;
+  content: url(../img/cart-black.svg);
+}
+
+.icon-cart-white::before {
+  width: 25px;
+  height: 25px;
+  content: url(../img/cart-white.svg);
+}
+
+.icon-cart-white-min::before {
+  content: url(../img/min/cart-white-mobile.svg);
+}
+
+.icon-cart-blue-min::before {
+  content: url(../img/cart-blue-min.svg);
+}
+
+.icon-cart-blue::before {
+  width: 25px;
+  height: 25px;
+  content: url(../img/cart-blue.svg);
+}
+
+.icon-user-black::before {
+  content: url(../img/user-black.svg);
+}
+
+.icon-user-blue::before {
+  content: url(../img/user-blue.svg);
+}
+
+.icon-settings::before {
+  content: url(../img/settings.svg);
+}
+
+.icon-search::before {
+  content: url(../img/search.svg);
+}
+
+.icon-delete::before {
+  content: url(../img/delete.svg);
+}
+
+.icon-heart-border-black::before {
+  content: url(../img/heart-border-black.svg);
+}
+
+.icon-heart-border-blue::before {
+  content: url(../img/heart-border-blue.svg);
+}
+
+.icon-heart-fill-blue::before {
+  content: url(../img/heart-fill-blue.svg);
+}
+
+.icon-menu::before {
+  content: url(../img/menu.svg);
+}
+
+.icon-timer::before {
+  content: url(../img/timer.svg);
+}
+
+.icon-timer-blue::before {
+  content: url(../img/timer-blue.svg);
+}
+
+.icon-arrow-left-min::before {
+  content: url(../img/arrow-left-min.svg);
+}
+
+.icon-arrow-right-min::before {
+  content: url(../img/arrow-right-min.svg);
+}

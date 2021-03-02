@@ -1,0 +1,1281 @@
+/* ANCHOR alles  */
+html * {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.logo {
+  padding-left: 5px;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.h2,
+.h2-varianty-predmetu {
+  text-align: center;
+}
+
+summary {
+  cursor: pointer;
+}
+
+/* ANCHOR odstranění pojebaný šipky u dropdown věcí */
+details>summary:first-of-type {
+  list-style-type: none;
+}
+
+details>summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  font-size: 0px;
+}
+
+details>summary {
+  list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+.active-mobile {
+  display: grid;
+}
+
+.active-desktop {
+  display: none;
+}
+
+.active-desktop-block {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .active-mobile {
+    display: none;
+  }
+
+  .active-desktop {
+    display: grid;
+  }
+
+  .active-desktop-block {
+    display: block;
+  }
+}
+
+/* NOTE loginpage */
+
+.login-text {
+  margin-bottom: 10rem;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+
+  background-image: url(../img/login-bg-min-min.jpg);
+  background-size: cover;
+}
+
+.bg-line {
+  background-color: rgb(0, 119, 132, .7);
+}
+
+.login-text-container {
+  background-color: rgb(0, 119, 132, .7);
+}
+
+.login-heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.login-text {
+  margin-bottom: 4rem;
+}
+
+.login-btn {
+  color: var(--white);
+  padding: 4px 15px 3px 20px;
+  margin-top: 50px;
+  border: 1px solid var(--white);
+}
+
+.login-text-min {
+  margin-bottom: 1rem;
+}
+
+.login-text {
+  margin-bottom: 10rem;
+}
+
+/* NOTE nav s ico */
+
+.main-nav {
+  width: 100%;
+  padding: 5px 0 3px 0;
+  border-bottom: var(--lightBorder);
+}
+
+.nav-kategorie-admin-ul {
+  position: absolute;
+  left: 0;
+  background-color: var(--bg);
+  width: 100%;
+  padding-left: 25%;
+  box-shadow: var(--boxShadow);
+  margin-top: 6px;
+}
+
+.nav-kategorie-admin-ul-menu-mobile {
+  margin-top: 9px;
+}
+
+.nav-kategorie-layout-ul {
+  position: absolute;
+  left: 0;
+  background-color: var(--bg);
+  width: 100%;
+  padding-left: 25%;
+  box-shadow: var(--boxShadow);
+  margin-top: 4px;
+}
+
+.nav-li,
+.nav-mobile-li,
+.nav-menu-li {
+  padding: 15px 0 15px 0;
+}
+
+.nav-li:first-of-type,
+.nav-mobile-li:first-of-type,
+.nav-menu-li:first-of-type {
+  padding-top: 25px;
+}
+
+.nav-li:last-of-type,
+.nav-mobile-li:last-of-type,
+.nav-menu-li:last-of-type {
+  padding-bottom: 25px;
+}
+
+.main-nav-admin-desktop-layout-row,
+.main-nav-layout {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-nav {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border-bottom: var(--lightBorder);
+  }
+
+  .nav-kategorie-admin-ul,
+  .nav-kategorie-layout-ul {
+    margin-top: 12px;
+  }
+
+  .nav-kategorie-admin-ul-menu-mobile {
+    margin-top: 14px;
+  }
+}
+
+/* NOTE search  */
+
+.search-area,
+.search-area-admin {
+  position: absolute;
+  left: 0;
+  background-color: var(--bg);
+  width: 100%;
+  padding: 15px 10px;
+  box-shadow: var(--boxShadow);
+}
+
+.search-area {
+  margin-top: 8px;
+}
+
+.search-area-admin {
+  margin-top: 6px;
+}
+
+.search-input {
+  background-color: var(--bg);
+  border: none;
+  padding-left: 15px;
+  width: 80%;
+  height: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .search-area {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    width: 40%;
+    padding-top: 10px;
+    margin-top: 16px;
+    padding-bottom: 10px;
+    box-shadow: var(--boxShadow);
+  }
+
+  .search-area-admin {
+    position: absolute;
+    left: 0;
+    width: 40%;
+    padding-top: 10px;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    box-shadow: var(--boxShadow);
+  }
+
+  .search-input {
+    padding-left: 15px;
+    width: 80%;
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .search-area {
+    width: 25%;
+    margin-top: 12px;
+  }
+
+  .search-area-admin {
+    width: 25%;
+    margin-top: 7px;
+  }
+}
+
+.icon-search-input {
+  opacity: .5;
+}
+
+/* NOTE nav admin */
+
+.main-nav-admin-mobile {
+  width: 100%;
+  padding-top: .3rem;
+  padding-bottom: .2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.main-nav-admin-layout {
+  padding: 5px 0 3px 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .main-nav-admin-layout {
+    position: relative;
+    padding: 10px 0 10px 0;
+  }
+
+  .nav-kategorie-layout-ul,
+  .nav-kategorie-admin-ul {
+    position: absolute;
+    right: 0;
+    max-width: 50%;
+    margin-left: 65%;
+    padding-left: 20px;
+  }
+
+  .main-container-layout {
+    position: relative;
+  }
+
+  .main-nav-admin-desktop {
+    position: relative;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .logo {
+    padding-left: 5px;
+  }
+
+  .nav-kategorie-layout-ul,
+  .nav-kategorie-admin-ul {
+    position: absolute;
+    width: 20%;
+    margin-top: 12px;
+    margin-left: 40%;
+    box-shadow: var(--boxShadow);
+  }
+
+  .nav-menu-admin-desktop-ul {
+    position: absolute;
+    left: 18%;
+    z-index: 99999;
+    width: 20%;
+    margin-top: 17px;
+    padding-left: 20px;
+    background-color: var(--bg);
+    box-shadow: var(--boxShadow);
+  }
+
+  .secondary-main-nav-admin-desktop {
+    padding: 15px 0px 15px 0px;
+    border-top: var(--lightBorder);
+    border-bottom: var(--lightBorder);
+  }
+
+  .header-prehled {
+    margin-top: 150px;
+  }
+
+  .main-nav-admin-desktop {
+    padding: 5px 0px 5px 0px;
+    border-bottom: var(--lightBorder);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav-menu-admin-desktop-ul {
+    left: 25%;
+  }
+}
+
+/* NOTE footer */
+
+.main-footer {
+  padding: 10px 0px;
+}
+
+.main-footer-layout {
+  border-top: var(--lightBorder);
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%); */
+}
+
+.logout-btn {
+  display: inline-block;
+  border: var(--btnBorder);
+  padding: 5px 40px 2px 40px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .logout-btn {
+    margin-bottom: 0px;
+    padding: 5px 60px;
+  }
+
+  .footer-text {
+    padding-left: 10px;
+  }
+
+  .logout-btn-container-layout {
+    padding-right: 10px;
+  }
+}
+
+
+/* NOTE produkt item */
+
+.product-image {
+  position: relative;
+}
+
+.product-item {
+  background-color: var(--white);
+}
+
+.product-item:hover {
+  box-shadow: var(--boxShadowLight);
+}
+
+.heart-checkbox {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .heart-checkbox {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+
+
+@media only screen and (min-width: 410px) {}
+
+.product-title,
+.product-text {
+  padding: 0px 5px;
+}
+
+@media only screen and (min-width: 790px) {
+
+  .product-title,
+  .product-text {
+    padding: 0px 15px;
+  }
+}
+
+.pridat-do-kosiku-btn {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 8px 0px 7px 0px;
+  background-color: var(--blue);
+}
+
+.pridat-do-kosiku-btn-pridano {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 8px 0px 7px 0px;
+  border: var(--btnBorder);
+  box-sizing: border-box;
+}
+
+.like-btn {
+  cursor: pointer;
+}
+
+.icon-cart-btn {
+  padding-right: 5px;
+}
+
+@media only screen and (min-width: 650px) {
+  .icon-cart-btn {
+    padding-right: 12px;
+  }
+}
+
+/* NOTE detail produktu */
+.predmet-info-layout {
+  margin-top: 45px;
+}
+
+.predmet-detil-img {
+  background-color: var(--white);
+}
+
+.predmet-detil-img img,
+.calendar img {
+  width: 100%;
+}
+
+.predmet-detail-texty {
+  padding: 0px 10px;
+}
+
+.detail-heading {
+  text-align: start;
+}
+
+.pocet-kusu-border-btn {
+  height: 20px;
+  width: 120px;
+  text-align: center;
+  border: var(--basicBorder);
+  padding: 10px 0px 4px 0px;
+  margin-bottom: 20px;
+}
+
+.icon-pocet-kusu {
+  padding: 0px 20px;
+}
+
+.icon-cart-btn {
+  padding-right: 10px;
+}
+
+.predmet-detail-kosik-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 0px 7px 0px;
+  background-color: var(--blue);
+  border: var(--transparentBorder);
+  width: 100%;
+}
+
+.predmet-detail-kosik-btn-pridano {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 0px 7px 0px;
+  border: var(--btnBorder);
+  width: 100%;
+}
+
+.detail-predmetu-layout .h2 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 960px) {
+  .predmet-info-layout {
+    padding-top: 20px;
+  }
+
+  .detail-predmetu-layout .h2 {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+
+  .predmet-detail-texty .h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .calendar img {
+    width: calc(46rem + 30px);
+  }
+
+  .predmet-detail-texty {
+    max-width: 23rem;
+  }
+}
+
+
+/* NOTE obsah košíku */
+.kosik-item-layout {
+  border-top: var(--lightBorder);
+  padding: 10px 0;
+}
+
+.kosik-item-layout:last-of-type {
+  border-bottom: var(--lightBorder);
+}
+
+.kosik-mnozstvi {
+  padding-top: 5px;
+}
+
+.kosik-minus-icon {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.kosik-plus-icon {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.kosik-img-container {
+  height: 65px;
+  background-color: var(--white);
+}
+
+.kosik-nahled-img {
+  width: 100%;
+}
+
+/* NOTE texttový pole a input  */
+
+.calendar,
+.datetime-picker,
+.poznamka,
+.text-input,
+.select {
+  margin-top: 10px;
+  height: min-content;
+}
+
+.datetime-picker,
+.poznamka,
+.text-input,
+.select {
+  padding: 8px 10px 4px 10px;
+  width: 220px;
+}
+
+.select {
+  width: 240px;
+  padding: 12px 10px 8px 10px;
+}
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../icon/arrow-down.svg") white no-repeat;
+  background: url("../icon/arrow-down.svg") white no-repeat calc(100% - 10px);
+}
+
+.select::-ms-expand {
+  display: none;
+}
+
+.datetime-picker-true {
+  border: var(--greenBorder);
+}
+
+.datetime-picker:focus {
+  outline: none;
+}
+
+.poznamka,
+.select,
+.text-input {
+  border: var(--lightBorder);
+  resize: none;
+}
+
+.poznamka:focus,
+.text-input:focus,
+.select:focus {
+  border: var(--basicBorder);
+  outline: none;
+}
+
+.ulozit-btn {
+  background-color: var(--blue);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 150px;
+  height: 30px;
+  padding: 8px 10px 4px 10px;
+}
+
+.ulozit-btn-odkaz {
+  color: var(--white);
+  display: block;
+  padding: 5px 0px;
+  width: 150px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 440px) {
+  .kosik-texty-layout {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .kosik-img-container {
+    width: 100px;
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .kosik-specifikace-produktu {
+    padding-top: 5px;
+  }
+
+  .kosik-mnozstvi {
+    padding-top: 0px;
+  }
+}
+
+/* NOTE Profil */
+
+.header-logout {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.profil-order-nav {
+  padding-bottom: 10px;
+  opacity: .5;
+}
+
+.profil-h1 {
+  padding-bottom: 10px;
+}
+
+.vypujcka-jmeno,
+.vypujcka-datum,
+.vypujcka-stav {
+  padding-left: 5px;
+}
+
+.vypujcka-datum {
+  padding-top: 2px;
+}
+
+.vypujcka-item {
+  padding: 20px 0px;
+  border-top: var(--lightBorder);
+}
+
+.vypujcka-item:last-of-type {
+  border-bottom: var(--lightBorder);
+}
+
+.vypujcka-item:nth-child(even) {
+  background-color: var(--white);
+}
+
+.detail-vypujcky-item,
+.vypujcka-item-poznamka {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.detail-vypujcky-specifikace {
+  padding-top: 5px;
+}
+
+.detail-vypujcky-container {
+  display: none;
+}
+.detail-vypujcky-container.detail-vypujcky-container-checked {
+  display: block;
+}
+
+.vypujcka-container-icon-mobile,
+.vypujcka-container-icon-mobile-prehled {
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 375px) {
+
+  .vypujcka-jmeno,
+  .vypujcka-datum,
+  .detail-vypujcky-texty,
+  .detail-vypujcky-item,
+  .vypujcka-item-poznamka {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+
+  .vypujcka-jmeno,
+  .vypujcka-datum {
+    padding-left: 20px;
+  }
+
+  .detail-vypujcky-item,
+  .vypujcka-item-poznamka {
+    padding-left: 30px;
+  }
+}
+
+
+@media only screen and (min-width: 460px) {
+  .order-item {
+    padding: 0 30px;
+  }
+}
+
+
+@media only screen and (min-width: 680px) {
+
+  .vypujcka-jmeno,
+  .vypujcka-datum,
+  .detail-vypujcky-texty,
+  .detail-vypujcky-item,
+  .vypujcka-item-poznamka {
+    padding-left: 20px;
+  }
+
+  .vypujcka-datum {
+    padding-top: 5px;
+  }
+
+  .detail-vypujcky-item,
+  .vypujcka-item-poznamka {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+}
+
+.icon-active-desktop,
+.active-tablet {
+  display: none;
+}
+
+.icon-active-mobile {
+  display: block;
+}
+
+@media only screen and (min-width: 560px) {
+
+  .icon-active-desktop,
+  .active-tablet {
+    display: block;
+  }
+
+  .icon-active-mobile {
+    display: none;
+  }
+}
+
+.active-bigger-tablet {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .active-bigger-tablet {
+    display: grid;
+  }
+}
+
+/* NOTE okno s náhledem dostupnosti předmětu 
+? (zkrácená cesta k přidání do košíku) */
+.body {
+  position: relative;
+}
+
+.nahled-dostupnosti-layout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: rgb(0, 0, 0, .5);
+}
+
+.okno-nahled-dostupnosti {
+  background-color: var(--white);
+  width: 100%;
+  position: fixed;
+  top: 10%;
+}
+
+.okno-nahled-dostupnosti-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.nahled-calendar-img {
+  width: 100%;
+}
+
+.pridat-do-kosiku-btn-nahled {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.h2-nahled {
+  margin-top: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+@media only screen and (min-width: 420px) {
+  .close-btn {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .pridat-do-kosiku-btn-nahled {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .okno-nahled-dostupnosti {
+    width: 70%;
+    max-width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nahled-calendar {
+    width: 90%;
+  }
+
+  .pridat-do-kosiku-btn-nahled {
+    width: 30%;
+  }
+}
+
+/* REVIEW přehled - budoucnost */
+
+.nabidka-stav-vypujcky {
+  position: absolute;
+  z-index: 2;
+  background-color: var(--white);
+  box-shadow: var(--boxShadowLight);
+  padding: 10px;
+}
+
+.vypujcka-stav-vyber {
+  margin: 15px 10px;
+}
+
+/* NOTE zákazníci */
+
+.btn-dalsi {
+  color: var(--blue);
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.paginace-container {
+  margin-top: 20px;
+}
+
+.th-zakaznik-jmeno-odkaz,
+.thead-th-zakaznik-jmeno,
+.td-zakaznik-mail,
+.thead-th-zakaznik-mail {
+  text-align: start;
+}
+
+.thead-th-zakaznik-jmeno,
+.thead-th-zakaznik-mail {
+  padding-left: 20px;
+}
+
+.td-zakaznik-trida,
+.td-zakaznik-vypujcka-datum {
+  text-align: center;
+}
+
+.td-zakaznik-trida {
+  padding-right: 10px;
+}
+
+.zakaznik-tr {
+  padding: 10px 0;
+  border-top: var(--lightBorder);
+}
+
+.zakaznik-tr:nth-child(odd) {
+  background-color: var(--white);
+}
+
+.zakaznik-tr:last-of-type {
+  border-bottom: var(--lightBorder);
+}
+
+.th-zakaznik-jmeno-odkaz {
+  padding-left: 10px;
+}
+
+.td-zakaznik-vypujcka-datum {
+  padding-right: 5px;
+}
+
+.nav-seznam-zakazniku {
+  opacity: .5;
+}
+
+@media only screen and (min-width: 1024px) {
+  .th-zakaznik-jmeno-odkaz {
+    padding-left: 30px;
+  }
+
+  .thead-th-zakaznik-jmeno {
+    padding-left: 40px;
+  }
+}
+
+/* NOTE detail zákazníka */
+
+.header-zakaznik-info {
+  padding: 10px 0 0 10px;
+}
+
+.dt-zakaznik {
+  padding-top: 2px;
+}
+
+.dl-zakaznik {
+  padding: 5px 0;
+}
+
+/* NOTE správci */
+
+.toggle input {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  border: 2px solid var(--red);
+  border-radius: 20px;
+  background-color: var(--red);
+}
+
+.slider::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: .5px;
+  right: 50%;
+  background-color: #eee;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.toggle input:checked+.slider {
+  border: 2px solid var(--green);
+  border-radius: 20px;
+  background-color: var(--green);
+}
+
+.toggle input:checked+.slider::before {
+  left: 50%;
+}
+
+.h2-pozvanka {
+  padding-top: 20px;
+}
+
+.nova-pozvanka-btn {
+  color: var(--blue);
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.spravci-role {
+  padding: 5px 0;
+}
+
+.spravci-jmeno {
+  padding-top: 5px;
+}
+
+.spravci-mail {
+  padding: 2px 0 5px 0;
+}
+
+.spravci-item {
+  padding: 10px;
+  border-top: var(--lightBorder);
+}
+
+.spravci-item:last-of-type {
+  border-bottom: var(--lightBorder);
+}
+
+.spravci-item:nth-child(odd) {
+  background-color: var(--white);
+}
+
+/* NOTE historie předmětu */
+
+.predmet-info-layout-historie {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.main-header-icon {
+  padding: 0 20px;
+}
+
+/* REVIEW PROČ JE LAYOUT V COMPONENTS? */
+
+.varianty-predmetu-layout {
+  text-align: center;
+}
+
+.varianta-predmetu {
+  margin: 10px 0;
+}
+
+.h2-varianty-predmetu {
+  margin-top: 10px;
+}
+
+/* NOTE nový předmět, úprava předmětu */
+
+/* ANCHOR select checkbox  */
+.card {
+  background: var(--white);
+  padding: 10px 15px;
+  width: 90%;
+  height: 300px;
+  border: var(--lightBorder);
+  overflow-y: scroll;
+}
+
+.checkbox-select {
+  display: none;
+}
+
+.label {
+  position: relative;
+  display: block;
+  padding-left: 35px;
+  padding-top: 2px;
+  user-select: none;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.check-mark {
+  width: 20px;
+  height: 20px;
+  background-color: var(--lightGrey);
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  top: 0;
+  border-radius: 2px;
+}
+
+.checkbox-select:checked+.check-mark {
+  background-color: var(--green);
+  transition: .1s;
+}
+
+.checkbox-select:checked+.check-mark:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  transition: .1s;
+  height: 3px;
+  background: var(--green);
+  top: 45%;
+  left: 50%;
+  border-left: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.secondary-select {
+  opacity: .7;
+}
+
+.check-arrow {
+  width: 20px;
+  height: 20px;
+  background-image: url(../icon/arrow-down.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2px;
+  display: inline-block;
+  top: 5px;
+  padding-left: 5px;
+}
+
+
+@media only screen and (min-width: 760px) {
+  .card {
+    background: var(--white);
+    padding: 10px 15px;
+    width: 350px;
+  }
+}
+
+/* ANCHOR number input  */
+.number-input[type=number]::-webkit-inner-spin-button,
+.number-input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* .number-wrapper {
+  position: relative;
+}
+
+.number-wrapper:after,
+.number-wrapper:before {
+  position: absolute;
+  right: 6px;
+  width: 17px;
+  height: 10px;
+  font-size: 10px;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.number-wrapper:after {
+  content: url(../icon/arrow-up.svg);
+  top: 5px;
+}
+
+.number-wrapper:before {
+  content: url(../icon/arrow-down.svg);
+  bottom: 5px;
+}*/
+
+/* ANCHOR file input  */
+
+.file-input[type=file]::-webkit-file-upload-button {
+  border: none;
+  background-color: var(--bg);
+  padding: 8px 10px 4px 10px;
+  transition: 1s;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: "Hind", sans-serif;
+}
+
+.file-input[type=file]::file-selector-button {
+  border: none;
+  background-color: var(--bg);
+  padding: 8px 10px 4px 10px;
+  transition: 1s;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: "Hind", sans-serif;
+}
+
+.h2-uprava-predmetu {
+  margin-bottom: 20px;
+}
+
+/* ANCHOR checkbox display  */
+
+input[type="checkbox"],
+.checked {
+  display: none;
+}
+
+input[type="checkbox"]:checked~.checked {
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked~.unchecked {
+  display: none;
+}
