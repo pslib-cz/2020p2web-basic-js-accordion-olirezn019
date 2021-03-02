@@ -9,7 +9,6 @@ for (let i = 0; i < icons.length; i++) {
     let input = icons[i].querySelector("input");
     input.onclick = () => {
         if (input.checked) {;
-            boxes[i].style.display = "block";
             boxes[i].style.height = boxes[i].scrollHeight+"px";
         }
         else{
